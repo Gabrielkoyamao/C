@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-/*
+// Dado dois número inteiro positivo n, calcular e imprimir a sua soma.
 
-Exercicio 1
 int main(void){
     int num1, num2;
 
@@ -11,7 +10,8 @@ int main(void){
     printf("A soma dos numeros eh: %d", num1 + num2);
 }
 
-Exercicio 2
+//Faça um programa que solicite um número (inteiro/positivo) e imprima-o.
+
 int main(void){
     int num;
 
@@ -21,7 +21,7 @@ int main(void){
         printf("%d", num);
 }
 
-Exercicio 3
+// Dado um número positivo n, imprimir seu quadrado.
 
 int main(void){
     int n;
@@ -31,10 +31,7 @@ int main(void){
     printf("%d", n*n);
 }
 
-
-Exercicio 4
-
-
+// Faça um programa que solicite o ano em que uma pessoa nasceu e retorne sua idade.
 
 int main(void){
     int ano, idade;
@@ -46,8 +43,7 @@ int main(void){
 
 }
 
-Exercicio 5
-
+// Dado um número inteiro positivo n verificar se é par ou ímpar. Apresente uma mensagem na tela informando o número e o resultado. OBS:% utilizado para calcular o resto.
 
 int main(void){
     int num;
@@ -61,7 +57,7 @@ int main(void){
 
 }
 
-Exercicio 6
+// Dados três números, imprimi-los em ordem crescente.
 
 int main(void){
    int num1, num2, num3;
@@ -93,10 +89,12 @@ int main(void){
     }
 
 }
- Exercicio 7
 
+// Calcular o fatorial de um número fornecido pelo usuário.
+// A função fatorial de um número natural n é o produto de todos os n primeiros números naturais.
+// Fat(n)=n!=1.2.3.4...n. Vamos tomar Fat(0)=1.
 
- int fatorial();
+int fatorial();
 
  int main(void){
 
@@ -111,9 +109,9 @@ int main(void){
     }
 
  }
-
- Exercicio 8;
-
+ 
+ // Calcular a tabuada de um número fornecido pelo usuário multiplicado de 0 a 12.
+ 
  int main(void){
     int n,i=10;
 
@@ -125,15 +123,10 @@ int main(void){
         printf("%d x %d = %d\n", n, i, n*i);
         i--;
     }while(i > 0);
-
-
  }
-
-
- //Exercicio 9
-
-
-
+ 
+ // Crie um programa por meio do qual o usuário irá digitar a operação desejada e dois valores, ao final deverá ser exibido o resultado da operação.
+ 
  int main(void){
     int num1, num2, escolha, calculator=1;
 
@@ -182,13 +175,10 @@ int main(void){
             }
     }
  }
-
-// Exercicio 10
-
-
-
-
- int main(void){
+ 
+ // Dada uma sequência de números inteiros não-nulos, começando por 1,imprimir seus quadrados. 
+ 
+int main(void){
     int num,n,flag=1;
 
     printf("Digite 0 para sair do programa\n\n\n");
@@ -201,16 +191,53 @@ int main(void){
         if (n ==0){
             flag=0;
         }
-
     }
  }
 
- Exercicio 11
- soma dos primeiros numeros naturais
+ // Dado um número inteiro positivo n, calcular a soma dos n primeiros números naturais.
+ 
+ int main(void){
+    int n,aux=0,i=0;
 
- Exercicio 12
- Dado um numero imprimir os n primeiros numeros impares
+    scanf("%d", &n);
 
- Exercicio 13
- Calcular x elevado a n
-*/
+    do{
+        aux = aux + i;
+        i++;
+
+    }while(i<=n);
+
+    printf("%d", aux);
+
+}
+
+// Dado um número inteiro positivo n, imprimir os n primeiros naturais ímpares.
+
+int main(void){
+    int n,i=0;
+
+    scanf("%d", &n);
+
+    for(i=0; i<n; i++){
+        if(i%2 != 0)
+            printf("%d", i);
+    }
+}
+
+//  Dados um inteiro x e um inteiro não-negativo n, calcular x n.
+
+int main(void){
+    int x,n,r,i=1;
+
+    printf("Digite primeiro o valor de X e depois o valor a ser elevado: \n");
+    scanf("%d %d", &x, &n);
+
+    int aux=x;
+
+    do{
+        aux = aux * x;
+        i++;
+    }while(i<n);
+
+    printf("%d elevado a %d eh igual a: %d\n", x, n, aux);
+}
