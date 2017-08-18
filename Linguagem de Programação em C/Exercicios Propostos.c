@@ -138,43 +138,53 @@ int fatorial();
         printf("(1)...Divisao\n(2)...Resto da Divisao\n(3)...Adicao\n(4)...Multiplicacao\n(5)...Sair\n\n");
 
 
-        while(calculator != 0){
+        do{
 
             scanf("%d", &escolha);
 
-            if(escolha == 1){
-                printf("Digite os valores desejados para a Divisao: \n");
-                scanf("%d %d", &num1, &num2);
+            switch (escolha){
 
-                printf("Resultado: %d\n", num1 / num2);
+                case 1: {
+                    printf("Digite os valores desejados para a Divisao: \n");
+                    scanf("%d %d", &num1, &num2);
+
+                    printf("Resultado: %d\n", num1 / num2);
+                    break;
+                }
+
+                case 2: {
+                    printf("Digite os valores desejados para o Resto da Divisao: \n");
+                    scanf("%d %d", &num1, &num2);
+
+                    printf("Resultado: %d\n", num1 % num2);
+                    break;
+                }
+
+                case 3: {
+                    printf("Digite os valores desejados para a Adicao: \n");
+                    scanf("%d %d", &num1, &num2);
+
+                    printf("Resultado: %d\n", num1 + num2);
+                    break;
+                }
+
+                case 4 : {
+                    printf("Digite os valores desejados para a Multiplicacao: \n");
+                    scanf("%d %d", &num1, &num2);
+
+                    printf("Resultado: %d\n", num1 * num2);
+                    break;
+                }
+
+               case 5: {
+                    calculator = 0;
+                    break;
+                }
+
             }
+    }while(calculator != 0);
+}
 
-            else if (escolha == 2){
-                printf("Digite os valores desejados para o Resto da Divisao: \n");
-                scanf("%d %d", &num1, &num2);
-
-                printf("Resultado: %d\n", num1 % num2);
-            }
-
-            else if (escolha == 3){
-                printf("Digite os valores desejados para a Adicao: \n");
-                scanf("%d %d", &num1, &num2);
-
-                printf("Resultado: %d\n", num1 + num2);
-            }
-
-            else if (escolha == 4){
-                printf("Digite os valores desejados para a Multiplicacao: \n");
-                scanf("%d %d", &num1, &num2);
-
-                printf("Resultado: %d\n", num1 * num2);
-            }
-
-            else if (escolha == 5){
-                calculator = 0;
-            }
-    }
- }
  
  // Dada uma sequência de números inteiros não-nulos, começando por 1,imprimir seus quadrados. 
  
