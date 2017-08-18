@@ -271,27 +271,3 @@ void parImpar(int n){
         printf("E impar\n");
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
